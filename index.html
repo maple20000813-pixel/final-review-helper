@@ -1429,6 +1429,64 @@
     flex-wrap:wrap;
   }
 
+
+
+  /* 手机端使用指引：固定弹窗高度，内容区内部滚动，保证下一步按钮可点 */
+  .guide-modal{
+    max-height:calc(100dvh - 32px);
+    display:flex;
+    flex-direction:column;
+  }
+  .guide-head,
+  .guide-foot{
+    flex:0 0 auto;
+  }
+  .guide-body{
+    flex:1 1 auto;
+    min-height:0;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  @supports not (height: 100dvh){
+    .guide-modal{max-height:calc(100vh - 32px);}
+  }
+  @media (max-width:560px){
+    .guide-mask{
+      align-items:flex-start;
+      padding:12px;
+      overflow:hidden;
+    }
+    .guide-modal{
+      width:100%;
+      max-height:calc(100dvh - 24px);
+      border-radius:18px;
+    }
+    .guide-body{
+      max-height:none;
+    }
+    .guide-foot{
+      position:sticky;
+      bottom:0;
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+  }
+
+  /* 语音题划线字母组：网页和PDF都显示加粗斜体，提醒学生对比哪一组字母 */
+  .phonics-em{
+    font-weight:900;
+    font-style:italic;
+    color:var(--primary-d);
+    border-bottom:2px dashed var(--primary);
+    padding:0 1px;
+  }
+  @media print{
+    .phonics-em{
+      color:#111 !important;
+      border-bottom:1.5px solid #111 !important;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -42062,8 +42120,51 @@ document.addEventListener("DOMContentLoaded", function(){
   }
   function esc(s){ const d=document.createElement("div"); d.textContent=(s==null?"":s); return d.innerHTML; }
 
+  const PHONICS_MARK_MAP = {
+    // M3U1/M3U2/M4 常见语音题：标出要比较的字母或字母组合
+    doze:"o", does:"oe", hole:"o", nose:"o", come:"o", home:"o",
+    stay:"ay", key:"ey", sea:"ea", day:"ay", see:"ee", tea:"ea", today:"ay", birthday:"ay", said:"ai", wait:"ai", play:"ay", says:"ay",
+    dad:"a", laugh:"au", garden:"ar", cat:"a", class:"a", car:"ar", back:"a", man:"a", triangle:"a", what:"a",
+    work:"or", floor:"oor", autumn:"au", word:"or", door:"oor", more:"or",
+    square:"are", bear:"ear", tear:"ear", hair:"air", pear:"ear", hear:"ear", pair:"air", near:"ear", deer:"eer", Clare:"are",
+    mouse:"ou", cloud:"ou", brown:"ow", blow:"ow", out:"ou", aloud:"ou", young:"ou", mountain:"ou", blouse:"ou", bow:"ow", owl:"ow", snow:"ow",
+    cream:"ea", please:"ea", great:"ea", meet:"ee", these:"e", meeting:"ee", help:"e", leave:"ea",
+    music:"u", cut:"u", drum:"u", rubber:"u", body:"o", some:"o", money:"o"
+  };
+
+  function markPhonicsWord(word){
+    const raw = String(word || "");
+    if (!raw) return raw;
+    const direct = PHONICS_MARK_MAP[raw] || PHONICS_MARK_MAP[raw.toLowerCase()];
+    let part = direct;
+
+    if (!part && typeof PHONICS_BANK !== "undefined" && Array.isArray(PHONICS_BANK)) {
+      const item = PHONICS_BANK.find(x => String(x.word || "").toLowerCase() === raw.toLowerCase());
+      const pattern = item && String(item.pattern || "").toLowerCase();
+      if (pattern && /^[a-z]+$/.test(pattern) && raw.toLowerCase().includes(pattern)) part = pattern;
+    }
+
+    if (!part) {
+      const lower = raw.toLowerCase();
+      const candidates = ["igh","eer","ear","air","are","oor","ow","ou","oo","or","ur","ir","er","ea","ee","ey","ay","ai","oa","oe","au","a","e","i","o","u"];
+      part = candidates.find(c => lower.includes(c));
+    }
+    if (!part) return raw;
+
+    const idx = raw.toLowerCase().indexOf(part.toLowerCase());
+    if (idx < 0) return raw;
+    return raw.slice(0, idx) + '<strong class="phonics-em"><em>' + raw.slice(idx, idx + part.length) + '</em></strong>' + raw.slice(idx + part.length);
+  }
+
+  function autoMarkPhonicsOptions(html){
+    if (!html || typeof html !== "string") return html;
+    if (!html.includes("发音不同") && !html.includes("划线部分发音")) return html;
+    return html.replace(/\b([A-D])\.\s*([A-Za-z][A-Za-z'-]*)/g, (m, label, word) => `${label}. ${markPhonicsWord(word)}`);
+  }
+
   function formatQuestionTextMarkup(s){
-    return esc(s).replace(/\[\[em\]\]([\s\S]*?)\[\[\/em\]\]/g, '<strong class="underline-em"><em>$1</em></strong>');
+    const marked = esc(s).replace(/\[\[em\]\]([\s\S]*?)\[\[\/em\]\]/g, '<strong class="underline-em"><em>$1</em></strong>');
+    return autoMarkPhonicsOptions(marked);
   }
 
   /* 判分：correctAnswers + acceptableAnswers 合并都算对 */
