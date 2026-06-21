@@ -13783,7 +13783,7 @@ const QUESTIONS = [
         "want"
       ]
     },
-    "decisionRule": "want + to + 动词原形 → want to have",
+    "decisionRule": "want + to + 动词原形 → want to have；bread 是食物，用 have，不用 drink。",
     "knowledgeTags": [
       "动词不定式",
       "want to do"
@@ -13792,10 +13792,10 @@ const QUESTIONS = [
       {
         "blankNo": 1,
         "correctAnswers": [
-          "to drink"
+          "to have"
         ],
         "acceptableAnswers": [],
-        "answerDisplay": "to drink",
+        "answerDisplay": "to have",
         "commonMistakes": [
           {
             "answers": [
@@ -13816,11 +13816,11 @@ const QUESTIONS = [
     ],
     "explanationSteps": [
       "want 后面接动词不定式：want to do。",
-      "have → to have。",
-      "所以是 want to have。"
+      "括号给 have，所以答案是 to have。",
+      "some bread 是食物，不能写 to drink。"
     ],
     "fallbackHint": "want 后接 to + 动词原形：want to do。",
-    "fallbackDiagnosis": "正确答案是 to have。want to do 是固定搭配。",
+    "fallbackDiagnosis": "正确答案是 to have。want to do 是固定搭配；bread 是食物，用 have。",
     "confusePoints": [
       "want to do（不定式）",
       "like doing（动名词）"
@@ -16024,7 +16024,7 @@ const QUESTIONS = [
     ],
     "extraPractice": [
       {
-        "question": "We eat {{blank1}} at the Spring Festival.",
+        "question": "We eat {{blank1}} during the Spring Festival.",
         "correctAnswers": [
           "dumplings"
         ],
@@ -17506,123 +17506,123 @@ const QUESTIONS = [
     "inputMode": "multi-blank",
     "question": "The Spring Festival is {{blank1}} January or February. {{blank2}} the Spring Festival, people clean their houses. {{blank3}} New Year's Eve, families have a big dinner. Children get red packets {{blank4}} the Spring Festival.",
     "decisionWords": {
-      "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": [
-        "Spring Festival",
-        "January",
-        "February"
-      ]
+        "tenseTriggers": [],
+        "structureTriggers": [],
+        "prepositionTriggers": [],
+        "otherTriggers": [
+            "Spring Festival",
+            "January",
+            "February"
+        ]
     },
-    "decisionRule": "在月份用 in；在节日用 at；在具体前夕用 On",
+    "decisionRule": "月份用 in；春节期间用 During/during the Spring Festival；具体前夕用 On New Year’s Eve。",
     "knowledgeTags": [
-      "介词搭配",
-      "时间介词",
-      "春节"
+        "介词搭配",
+        "时间介词",
+        "春节"
     ],
     "blanks": [
-      {
-        "blankNo": 1,
-        "correctAnswers": [
-          "in"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "in",
-        "commonMistakes": [
-          {
-            "answers": [
-              "on"
+        {
+            "blankNo": 1,
+            "correctAnswers": [
+                "in"
             ],
-            "hint": "月份前用什么介词？",
-            "diagnosis": "正确答案是 in。在月份用 in。"
-          }
-        ]
-      },
-      {
-        "blankNo": 2,
-        "correctAnswers": [
-          "At"
-        ],
-        "acceptableAnswers": [
-          "at"
-        ],
-        "answerDisplay": "At",
-        "commonMistakes": [
-          {
-            "answers": [
-              "In"
+            "acceptableAnswers": [],
+            "answerDisplay": "in",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "on"
+                    ],
+                    "hint": "月份前用什么介词？",
+                    "diagnosis": "正确答案是 in。在月份用 in。"
+                }
+            ]
+        },
+        {
+            "blankNo": 2,
+            "correctAnswers": [
+                "During"
             ],
-            "hint": "在节日用什么介词？",
-            "diagnosis": "正确答案是 At。at + 节日。"
-          }
-        ]
-      },
-      {
-        "blankNo": 3,
-        "correctAnswers": [
-          "On"
-        ],
-        "acceptableAnswers": [
-          "on"
-        ],
-        "answerDisplay": "On",
-        "commonMistakes": [
-          {
-            "answers": [
-              "At"
+            "acceptableAnswers": [
+                "during"
             ],
-            "hint": "在节日前夕用什么介词？",
-            "diagnosis": "正确答案是 On。On New Year's Eve。"
-          }
-        ]
-      },
-      {
-        "blankNo": 4,
-        "correctAnswers": [
-          "at"
-        ],
-        "acceptableAnswers": [
-          "At"
-        ],
-        "answerDisplay": "at",
-        "commonMistakes": [
-          {
-            "answers": [
-              "in"
+            "answerDisplay": "During",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "At",
+                        "at"
+                    ],
+                    "hint": "春节期间，本册知识点更推荐用 during。",
+                    "diagnosis": "正确答案是 During。During the Spring Festival = 在春节期间。"
+                }
+            ]
+        },
+        {
+            "blankNo": 3,
+            "correctAnswers": [
+                "On"
             ],
-            "hint": "在节日用什么介词？",
-            "diagnosis": "正确答案是 at。at the Spring Festival。"
-          }
-        ]
-      }
+            "acceptableAnswers": [
+                "on"
+            ],
+            "answerDisplay": "On",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "At"
+                    ],
+                    "hint": "在节日前夕用什么介词？",
+                    "diagnosis": "正确答案是 On。On New Year's Eve。"
+                }
+            ]
+        },
+        {
+            "blankNo": 4,
+            "correctAnswers": [
+                "during"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "during",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "at"
+                    ],
+                    "hint": "这里表示春节期间，和前面保持一致。",
+                    "diagnosis": "正确答案是 during。Children get red packets during the Spring Festival."
+                }
+            ]
+        }
     ],
     "explanationSteps": [
-      "January/February 是月份，用 in。",
-      "at the Spring Festival 在春节。",
-      "On New Year's Eve 在除夕。",
-      "at the Spring Festival 在春节期间。"
+        "January/February 是月份，用 in。",
+        "During the Spring Festival = 在春节期间。",
+        "On New Year’s Eve = 在除夕，具体某一天用 on。",
+        "Children get red packets during the Spring Festival，春节期间用 during。"
     ],
-    "fallbackHint": "月份用 in；节日用 at；前夕用 On。",
-    "fallbackDiagnosis": "正确答案：in, At, On, at。注意介词搭配规则。",
+    "fallbackHint": "月份用 in；春节期间用 during；New Year’s Eve 是具体一天，用 on。",
+    "fallbackDiagnosis": "正确答案：in, During, On, during。注意：本册知识点中“春节期间”用 during the Spring Festival。",
     "confusePoints": [
-      "at + 节日 vs On + 前夕",
-      "in + 月份"
+        "during the Spring Festival（春节期间）",
+        "On New Year’s Eve（在除夕）",
+        "in + 月份"
     ],
     "extraPractice": [
-      {
-        "question": "Mid-Autumn Festival is {{blank1}} September or October. {{blank2}} the festival, we eat mooncakes.",
-        "correctAnswers": [
-          "in",
-          "At"
-        ],
-        "answerDisplay": "in, At",
-        "shortExplanation": "月份用 in，节日用 at。"
-      }
+        {
+            "question": "Mid-Autumn Festival is {{blank1}} September or October. {{blank2}} the festival, we eat mooncakes.",
+            "correctAnswers": [
+                "in",
+                "At"
+            ],
+            "answerDisplay": "in, At",
+            "shortExplanation": "月份用 in，节日用 at。"
+        }
     ],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
+},
   {
     "id": "m4u2-3-III-1",
     "topic": "否定句",
@@ -17972,7 +17972,7 @@ const QUESTIONS = [
     "questionNo": "5",
     "questionType": "fill-blank",
     "inputMode": "multi-blank",
-    "question": "My family gets together at the Spring Festival. (划线部分提问：My family) {{blank1}} {{blank2}} together at the Spring Festival?",
+    "question": "My family gets together during the Spring Festival. (划线部分提问：My family) {{blank1}} {{blank2}} together during the Spring Festival?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -18379,7 +18379,7 @@ const QUESTIONS = [
     ],
     "extraPractice": [
       {
-        "question": "What do people do at the Spring Festival?",
+        "question": "What do people do during the Spring Festival?",
         "correctAnswers": [
           "have a big dinner"
         ],
@@ -25331,17 +25331,21 @@ const QUESTIONS = [
     "questionNo": "6",
     "questionType": "fill-blank",
     "inputMode": "multi-blank",
-    "question": "-- Do you have {{blank1}} (some) noodles for lunch? -- No. I have {{blank2}} (many) rice.",
+    "question": "-- Do you have {{blank1}} (some) noodles for lunch? -- No. I have {{blank2}} (some) rice.",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
       "prepositionTriggers": [],
-      "otherTriggers": []
+      "otherTriggers": [
+        "Do you have ...?",
+        "No. I have ..."
+      ]
     },
-    "decisionRule": "Do you have ...? 问句用 any；many → much（rice 不可数）",
+    "decisionRule": "一般疑问句中 some 通常变 any；肯定回答/陈述句中 some 保留 some。",
     "knowledgeTags": [
       "some/any",
-      "many/much"
+      "疑问句",
+      "肯定句"
     ],
     "blanks": [
       {
@@ -25356,59 +25360,66 @@ const QUESTIONS = [
             "answers": [
               "some"
             ],
-            "hint": "Do you have ...? 是一般疑问句，用 any。",
-            "diagnosis": "正确答案是 any。一般疑问句用 any。"
+            "hint": "Do you have ...? 是一般疑问句，括号给 some，要变成 any。",
+            "diagnosis": "正确答案是 any。一般疑问句中 some 通常变 any：Do you have any noodles?"
           }
         ]
       },
       {
         "blankNo": 2,
         "correctAnswers": [
-          "much"
+          "some"
         ],
         "acceptableAnswers": [],
-        "answerDisplay": "much",
+        "answerDisplay": "some",
         "commonMistakes": [
           {
             "answers": [
-              "many"
+              "any"
             ],
-            "hint": "rice 是不可数名词，用 much，不能用 many。",
-            "diagnosis": "正确答案是 much。rice 是不可数名词，用 much 修饰。"
+            "hint": "第二句是肯定陈述句，不是否定句，也不是一般疑问句。",
+            "diagnosis": "正确答案是 some。No 只是回答上一句，后面的 I have some rice. 是肯定陈述句，所以用 some。"
+          },
+          {
+            "answers": [
+              "much"
+            ],
+            "hint": "括号给的是 some，这里考 some/any，不是在考 much/many。",
+            "diagnosis": "正确答案是 some。I have some rice. 是自然表达；本题不是 many 改 much。"
           }
         ]
       }
     ],
     "explanationSteps": [
-      "第1空：Do you have ...? 问句用 any",
-      "第2空：rice 是不可数名词",
-      "不可数名词用 much 修饰",
-      "many → much"
+      "第1空：Do you have ...? 是一般疑问句，some 通常变 any。",
+      "第2空：No. 后面的 I have ... rice 是肯定陈述句。",
+      "肯定陈述句中括号给 some，就保留 some。",
+      "注意：这里不是 many/much 题，不要把 much 当成 any 的替代答案。"
     ],
-    "fallbackHint": "Do you have 问句用 some 还是 any？rice 是可数还是不可数？",
-    "fallbackDiagnosis": "正确答案是 any 和 much。Do you have ...? 用 any；rice 不可数用 much。",
+    "fallbackHint": "先看句子类型：第一句是一般疑问句，第二句是肯定陈述句。括号给的是 some。",
+    "fallbackDiagnosis": "正确答案是 any 和 some。Do you have any noodles? 是一般疑问句；I have some rice. 是肯定陈述句。",
     "confusePoints": [
-      "many + 可数复数（many books）",
-      "much + 不可数（much water）",
-      "some + 任何（肯定/邀请）",
-      "any + 任何（疑问/否定）"
+      "Do you have any...? 一般疑问句常用 any",
+      "I have some... 肯定陈述句常用 some",
+      "No. 只是回答上一句，不会让后面的 I have some rice 变成否定句",
+      "much/many 只有题目明确考数量时才使用"
     ],
     "extraPractice": [
       {
-        "question": "There isn't {{blank1}} (much/many) time.",
-        "correctAnswers": [
-          "much"
-        ],
-        "answerDisplay": "much",
-        "shortExplanation": "time 不可数。"
-      },
-      {
-        "question": "Do you have {{blank1}} (some/any) friends?",
+        "question": "Do you have {{blank1}} (some) juice?",
         "correctAnswers": [
           "any"
         ],
         "answerDisplay": "any",
-        "shortExplanation": "疑问句用 any。"
+        "shortExplanation": "一般疑问句中 some 通常变 any。"
+      },
+      {
+        "question": "No. I have {{blank1}} (some) water.",
+        "correctAnswers": [
+          "some"
+        ],
+        "answerDisplay": "some",
+        "shortExplanation": "肯定陈述句中 some 保留 some。"
       }
     ],
     "referenceAnswers": [],
@@ -38017,7 +38028,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "There isn’t {{blank1}} water in the bottle, but there are {{blank2}} cups on the table.",
+    "question": "There isn’t {{blank1}} (some) water in the bottle, but there are {{blank2}} (some) cups on the table.",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -38115,7 +38126,7 @@ document.addEventListener("DOMContentLoaded", function(){
   },
   {
     "id": "sim-1-011",
-    "topic": "some/any/many/much",
+    "topic": "节日语篇：some/any",
     "paper": "考前模拟",
     "section": "综合模拟卷 A",
     "questionNo": "11",
@@ -38123,52 +38134,116 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "Would you like {blank1} rice dumplings? There aren’t {blank2} biscuits left.",
+    "question": "{{blank1}} (介词) the Dragon Boat Festival, the children have lunch with their family. They want {{blank2}} (some) sweet rice dumplings. Mum says, “There aren’t {{blank3}} (some) sweet rice dumplings left. Would you like {{blank4}} (some) salty rice dumplings?”",
     "decisionWords": {
       "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+      "structureTriggers": [
+        "There aren’t",
+        "Would you like"
+      ],
+      "prepositionTriggers": [
+        "festival"
+      ],
+      "otherTriggers": [
+        "some",
+        "any",
+        "节日食物",
+        "家庭场景"
+      ]
     },
-    "decisionRule": "Would you like...? 表示邀请，常用 some；否定句用 any。",
+    "decisionRule": "端午节家庭午餐里，孩子想吃甜粽子；甜粽子没有了，妈妈改问要不要咸粽子。节日期间可用 at/during；肯定句和邀请句用 some，否定句用 any。",
     "knowledgeTags": [
+      "Dragon Boat Festival",
+      "rice dumplings",
       "some/any",
-      "可数不可数"
+      "介词"
     ],
     "blanks": [
       {
         "blankNo": 1,
         "correctAnswers": [
-          "some"
+          "at"
         ],
-        "acceptableAnswers": [],
-        "answerDisplay": "some",
+        "acceptableAnswers": [
+          "during"
+        ],
+        "answerDisplay": "At",
         "commonMistakes": []
       },
       {
         "blankNo": 2,
         "correctAnswers": [
+          "some"
+        ],
+        "acceptableAnswers": [],
+        "answerDisplay": "some",
+        "commonMistakes": [
+          {
+            "answers": [
+              "any"
+            ],
+            "hint": "这是肯定句或礼貌邀请句，通常用 some。",
+            "diagnosis": "正确答案是 some。肯定句和 Would you like some...? 这类礼貌邀请中常用 some。"
+          }
+        ]
+      },
+      {
+        "blankNo": 3,
+        "correctAnswers": [
           "any"
         ],
         "acceptableAnswers": [],
         "answerDisplay": "any",
-        "commonMistakes": []
+        "commonMistakes": [
+          {
+            "answers": [
+              "some"
+            ],
+            "hint": "这是 There aren’t... 否定句，some 通常变成什么？",
+            "diagnosis": "正确答案是 any。否定句 There aren’t any... 表示没有。"
+          }
+        ]
+      },
+      {
+        "blankNo": 4,
+        "correctAnswers": [
+          "some"
+        ],
+        "acceptableAnswers": [],
+        "answerDisplay": "some",
+        "commonMistakes": [
+          {
+            "answers": [
+              "any"
+            ],
+            "hint": "这是肯定句或礼貌邀请句，通常用 some。",
+            "diagnosis": "正确答案是 some。肯定句和 Would you like some...? 这类礼貌邀请中常用 some。"
+          }
+        ]
       }
     ],
-    "explanation": "Would you like...? 表示邀请，常用 some；否定句用 any。",
+    "explanation": "端午节家庭午餐里，孩子想吃甜粽子；甜粽子没有了，妈妈改问要不要咸粽子。节日期间可用 at/during；肯定句和邀请句用 some，否定句用 any。",
     "explanationSteps": [
-      "Would you like...? 表示邀请，常用 some；否定句用 any。"
+      "先看节日/家庭场景，确认前后句是同一个小故事。",
+      "第1空是节日期间的介词，at/during 都可；本题主答案用 At。",
+      "肯定句中表示“一些”用 some。",
+      "There aren’t... 是否定句，some 变 any。",
+      "Would you like some...? 是礼貌邀请，仍用 some。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "Would you like...? 表示邀请，常用 some；否定句用 any。",
-    "confusePoints": [],
+    "fallbackHint": "先读成小故事：节日家庭活动 → 某种传统食物没有了 → 长辈换一种食物来问孩子要不要。",
+    "fallbackDiagnosis": "端午节家庭午餐里，孩子想吃甜粽子；甜粽子没有了，妈妈改问要不要咸粽子。节日期间可用 at/during；肯定句和邀请句用 some，否定句用 any。",
+    "confusePoints": [
+      "some/any 要看句型和语气",
+      "节日食物要符合文化语境",
+      "Double Ninth cakes 注意大小写"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
   },
   {
     "id": "sim-1-012",
-    "topic": "some/any/many/much",
+    "topic": "综合语篇填空",
     "paper": "考前模拟",
     "section": "综合模拟卷 A",
     "questionNo": "12",
@@ -38176,49 +38251,200 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "Are there {{blank1}} mice near the old gate? There is not {{blank2}} gold in the bag.",
+    "question": "The {{blank1}} (child) see an old bag {{blank2}} (介词) the old gate. They hear {{blank3}} (some) noise {{blank4}} (介词) the bag and say, “Are there {{blank5}} (some) mice near the old gate? {{blank6}} (be) there {{blank7}} (some) treasure in the bag?” Then they open the bag, but there isn’t {{blank8}} (some) gold in the bag.",
     "decisionWords": {
-      "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+        "tenseTriggers": [],
+        "structureTriggers": [
+            "Are there",
+            "Is there",
+            "There isn’t"
+        ],
+        "prepositionTriggers": [
+            "old bag",
+            "old gate",
+            "noise",
+            "bag"
+        ],
+        "otherTriggers": [
+            "child",
+            "some",
+            "treasure",
+            "gold"
+        ]
     },
-    "decisionRule": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
+    "decisionRule": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
     "knowledgeTags": [
-      "some/any",
-      "可数不可数"
+        "语篇逻辑",
+        "some/any",
+        "There be",
+        "介词",
+        "child复数"
     ],
     "blanks": [
-      {
-        "blankNo": 1,
-        "correctAnswers": [
-          "any"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "any",
-        "commonMistakes": []
-      },
-      {
-        "blankNo": 2,
-        "correctAnswers": [
-          "much"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "much",
-        "commonMistakes": []
-      }
+        {
+            "blankNo": 1,
+            "correctAnswers": [
+                "children"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "children",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "child"
+                    ],
+                    "hint": "后面的动词是 see，主语应该是单数还是复数？",
+                    "diagnosis": "正确答案是 children。The children see... 中主语是复数，child 要变成 children。"
+                }
+            ]
+        },
+        {
+            "blankNo": 2,
+            "correctAnswers": [
+                "near"
+            ],
+            "acceptableAnswers": [
+                "by",
+                "beside",
+                "next to",
+                "at"
+            ],
+            "answerDisplay": "near",
+            "commonMistakes": []
+        },
+        {
+            "blankNo": 3,
+            "correctAnswers": [
+                "some"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "some",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "any"
+                    ],
+                    "hint": "这是肯定句，表示听到一些声音。",
+                    "diagnosis": "正确答案是 some。肯定句中表示“一些”通常用 some。"
+                }
+            ]
+        },
+        {
+            "blankNo": 4,
+            "correctAnswers": [
+                "behind"
+            ],
+            "acceptableAnswers": [
+                "near",
+                "around",
+                "beside",
+                "by",
+                "next to"
+            ],
+            "answerDisplay": "behind",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "in"
+                    ],
+                    "hint": "声音是在袋子里面，还是在袋子附近/后面？看后面他们会不会打开袋子。",
+                    "diagnosis": "这里不建议写 in the bag。后面孩子们还要打开袋子找 treasure；如果他们正在怀疑老鼠在袋子里面，就不会直接打开袋子。所以声音应理解为在袋子附近/后面，用 behind / near / around 等更合理。"
+                }
+            ]
+        },
+        {
+            "blankNo": 5,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some"
+                    ],
+                    "hint": "Are there...? 是一般疑问句，some 通常要变成什么？",
+                    "diagnosis": "正确答案是 any。Are there any mice...? 是一般疑问句，问有没有老鼠。"
+                }
+            ]
+        },
+        {
+            "blankNo": 6,
+            "correctAnswers": [
+                "Is"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "Is",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "Are",
+                        "are"
+                    ],
+                    "hint": "treasure 在这里按不可数名词看，there be 用 is 还是 are？",
+                    "diagnosis": "正确答案是 Is。treasure 在这里按不可数名词看，所以是 Is there any treasure?"
+                }
+            ]
+        },
+        {
+            "blankNo": 7,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some"
+                    ],
+                    "hint": "Is there...? 是一般疑问句，some 通常变成 any。",
+                    "diagnosis": "正确答案是 any。Is there any treasure? 是一般疑问句。"
+                }
+            ]
+        },
+        {
+            "blankNo": 8,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some",
+                        "much"
+                    ],
+                    "hint": "括号给的是 some；否定句里 some 通常变成 any。",
+                    "diagnosis": "正确答案是 any。There isn’t any gold in the bag. 这里表示袋子里没有金子，不是考 much/many。"
+                }
+            ]
+        }
     ],
-    "explanation": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
+    "explanation": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
     "explanationSteps": [
-      "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。"
+        "child 变复数 children，后面动词用 see。",
+        "old bag near/by/beside the old gate：袋子在旧门附近。",
+        "肯定句 They hear some noise，用 some。",
+        "声音在袋子后面或附近，用 behind / near / around 等；不要写 in the bag。",
+        "Are there...? 是一般疑问句，some mice 变 any mice。",
+        "treasure 在这里按不可数名词看：Is there any treasure in the bag?",
+        "否定句 There isn’t any gold... 表示没有金子。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
-    "confusePoints": [],
+    "fallbackHint": "先按故事链读：看到袋子 → 听到声音 → 怀疑老鼠 → 猜有没有 treasure → 打开后没有 gold。",
+    "fallbackDiagnosis": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
+    "confusePoints": [
+        "some 肯定句 vs any 疑问/否定句",
+        "noise behind/near the bag，不是 in the bag",
+        "treasure/gold 在这里按不可数名词看",
+        "child → children"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
+},
   {
     "id": "sim-1-013",
     "topic": "some/any/many/much",
@@ -38503,17 +38729,19 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "介词填空",
     "difficulty": "中等偏难",
-    "question": "We eat special food {{blank1}} the Dragon Boat Festival. The festival is usually {{blank2}} September or October.",
+    "question": "We eat rice dumplings {{blank1}} the Dragon Boat Festival. The festival is usually {{blank2}} May or June.",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
       "prepositionTriggers": [],
       "otherTriggers": []
     },
-    "decisionRule": "节日活动/节日期间看搭配；月份前用 in。",
+    "decisionRule": "端午节吃粽子；节日期间用 at/during，月份前用 in。端午通常在 May or June。",
     "knowledgeTags": [
       "介词",
-      "固定搭配"
+      "Dragon Boat Festival",
+      "rice dumplings",
+      "月份"
     ],
     "blanks": [
       {
@@ -38521,7 +38749,9 @@ document.addEventListener("DOMContentLoaded", function(){
         "correctAnswers": [
           "at"
         ],
-        "acceptableAnswers": [],
+        "acceptableAnswers": [
+          "during"
+        ],
         "answerDisplay": "at",
         "commonMistakes": []
       },
@@ -38535,13 +38765,19 @@ document.addEventListener("DOMContentLoaded", function(){
         "commonMistakes": []
       }
     ],
-    "explanation": "节日活动/节日期间看搭配；月份前用 in。",
+    "explanation": "端午节吃粽子；节日期间用 at/during，月份前用 in。端午通常在 May or June。",
     "explanationSteps": [
-      "节日活动/节日期间看搭配；月份前用 in。"
+      "rice dumplings 是端午节传统食物。",
+      "at/during the Dragon Boat Festival 表示在端午节期间。",
+      "May or June 是月份，用 in。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "节日活动/节日期间看搭配；月份前用 in。",
-    "confusePoints": [],
+    "fallbackHint": "端午节吃粽子；月份前用 in。",
+    "fallbackDiagnosis": "正确答案：at / in。端午节通常在 May or June，不是 September or October。",
+    "confusePoints": [
+      "Dragon Boat Festival 通常在 May or June",
+      "月份前用 in",
+      "节日期间可用 at/during"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
@@ -38874,7 +39110,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "改句题",
     "difficulty": "偏难",
-    "question": "Peter often visits Grandma [[em]]twice a month[[/em]]. 对加粗斜体部分提问：{blank1} {blank2} {blank3} Peter {blank4} Grandma?",
+    "question": "Peter often visits Grandma [[em]]twice a month[[/em]]. 对加粗斜体部分提问：{{blank1}} {{blank2}} {{blank3}} Peter {{blank4}} Grandma?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -38946,7 +39182,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "改句题",
     "difficulty": "偏难",
-    "question": "The girls are practising a song [[em]]in the art room[[/em]]. 对加粗斜体部分提问：{blank1} {blank2} the girls practising a song?",
+    "question": "The girls are practising a song [[em]]in the art room[[/em]]. 对加粗斜体部分提问：{{blank1}} {{blank2}} the girls practising a song?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -39566,7 +39802,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "There isn’t {{blank1}} water in the bottle, but there are {{blank2}} cups on the table.",
+    "question": "There isn’t {{blank1}} (some) water in the bottle, but there are {{blank2}} (some) cups on the table.",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -39664,7 +39900,7 @@ document.addEventListener("DOMContentLoaded", function(){
   },
   {
     "id": "sim-2-011",
-    "topic": "some/any/many/much",
+    "topic": "节日语篇：some/any",
     "paper": "考前模拟",
     "section": "综合模拟卷 B",
     "questionNo": "11",
@@ -39672,52 +39908,116 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "Would you like {blank1} mooncakes? There aren’t {blank2} biscuits left.",
+    "question": "{{blank1}} (介词) the Mid-Autumn Festival, the children have dinner with their family. They want {{blank2}} (some) mooncakes. Grandma says, “There aren’t {{blank3}} (some) mooncakes left. Would you like {{blank4}} (some) fruit?”",
     "decisionWords": {
       "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+      "structureTriggers": [
+        "There aren’t",
+        "Would you like"
+      ],
+      "prepositionTriggers": [
+        "festival"
+      ],
+      "otherTriggers": [
+        "some",
+        "any",
+        "节日食物",
+        "家庭场景"
+      ]
     },
-    "decisionRule": "Would you like...? 表示邀请，常用 some；否定句用 any。",
+    "decisionRule": "中秋节家庭晚餐里，孩子想吃月饼；月饼没有了，奶奶改问要不要水果。节日期间可用 at/during；肯定句和邀请句用 some，否定句用 any。",
     "knowledgeTags": [
+      "Mid-Autumn Festival",
+      "mooncakes",
       "some/any",
-      "可数不可数"
+      "介词"
     ],
     "blanks": [
       {
         "blankNo": 1,
         "correctAnswers": [
-          "some"
+          "at"
         ],
-        "acceptableAnswers": [],
-        "answerDisplay": "some",
+        "acceptableAnswers": [
+          "during"
+        ],
+        "answerDisplay": "At",
         "commonMistakes": []
       },
       {
         "blankNo": 2,
         "correctAnswers": [
+          "some"
+        ],
+        "acceptableAnswers": [],
+        "answerDisplay": "some",
+        "commonMistakes": [
+          {
+            "answers": [
+              "any"
+            ],
+            "hint": "这是肯定句或礼貌邀请句，通常用 some。",
+            "diagnosis": "正确答案是 some。肯定句和 Would you like some...? 这类礼貌邀请中常用 some。"
+          }
+        ]
+      },
+      {
+        "blankNo": 3,
+        "correctAnswers": [
           "any"
         ],
         "acceptableAnswers": [],
         "answerDisplay": "any",
-        "commonMistakes": []
+        "commonMistakes": [
+          {
+            "answers": [
+              "some"
+            ],
+            "hint": "这是 There aren’t... 否定句，some 通常变成什么？",
+            "diagnosis": "正确答案是 any。否定句 There aren’t any... 表示没有。"
+          }
+        ]
+      },
+      {
+        "blankNo": 4,
+        "correctAnswers": [
+          "some"
+        ],
+        "acceptableAnswers": [],
+        "answerDisplay": "some",
+        "commonMistakes": [
+          {
+            "answers": [
+              "any"
+            ],
+            "hint": "这是肯定句或礼貌邀请句，通常用 some。",
+            "diagnosis": "正确答案是 some。肯定句和 Would you like some...? 这类礼貌邀请中常用 some。"
+          }
+        ]
       }
     ],
-    "explanation": "Would you like...? 表示邀请，常用 some；否定句用 any。",
+    "explanation": "中秋节家庭晚餐里，孩子想吃月饼；月饼没有了，奶奶改问要不要水果。节日期间可用 at/during；肯定句和邀请句用 some，否定句用 any。",
     "explanationSteps": [
-      "Would you like...? 表示邀请，常用 some；否定句用 any。"
+      "先看节日/家庭场景，确认前后句是同一个小故事。",
+      "第1空是节日期间的介词，at/during 都可；本题主答案用 At。",
+      "肯定句中表示“一些”用 some。",
+      "There aren’t... 是否定句，some 变 any。",
+      "Would you like some...? 是礼貌邀请，仍用 some。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "Would you like...? 表示邀请，常用 some；否定句用 any。",
-    "confusePoints": [],
+    "fallbackHint": "先读成小故事：节日家庭活动 → 某种传统食物没有了 → 长辈换一种食物来问孩子要不要。",
+    "fallbackDiagnosis": "中秋节家庭晚餐里，孩子想吃月饼；月饼没有了，奶奶改问要不要水果。节日期间可用 at/during；肯定句和邀请句用 some，否定句用 any。",
+    "confusePoints": [
+      "some/any 要看句型和语气",
+      "节日食物要符合文化语境",
+      "Double Ninth cakes 注意大小写"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
   },
   {
     "id": "sim-2-012",
-    "topic": "some/any/many/much",
+    "topic": "综合语篇填空",
     "paper": "考前模拟",
     "section": "综合模拟卷 B",
     "questionNo": "12",
@@ -39725,49 +40025,200 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "Are there {{blank1}} mice near the old gate? There is not {{blank2}} gold in the bag.",
+    "question": "The {{blank1}} (child) see an old bag {{blank2}} (介词) the old gate. They hear {{blank3}} (some) noise {{blank4}} (介词) the bag and say, “Are there {{blank5}} (some) mice near the old gate? {{blank6}} (be) there {{blank7}} (some) treasure in the bag?” Then they open the bag, but there isn’t {{blank8}} (some) gold in the bag.",
     "decisionWords": {
-      "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+        "tenseTriggers": [],
+        "structureTriggers": [
+            "Are there",
+            "Is there",
+            "There isn’t"
+        ],
+        "prepositionTriggers": [
+            "old bag",
+            "old gate",
+            "noise",
+            "bag"
+        ],
+        "otherTriggers": [
+            "child",
+            "some",
+            "treasure",
+            "gold"
+        ]
     },
-    "decisionRule": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
+    "decisionRule": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
     "knowledgeTags": [
-      "some/any",
-      "可数不可数"
+        "语篇逻辑",
+        "some/any",
+        "There be",
+        "介词",
+        "child复数"
     ],
     "blanks": [
-      {
-        "blankNo": 1,
-        "correctAnswers": [
-          "any"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "any",
-        "commonMistakes": []
-      },
-      {
-        "blankNo": 2,
-        "correctAnswers": [
-          "much"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "much",
-        "commonMistakes": []
-      }
+        {
+            "blankNo": 1,
+            "correctAnswers": [
+                "children"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "children",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "child"
+                    ],
+                    "hint": "后面的动词是 see，主语应该是单数还是复数？",
+                    "diagnosis": "正确答案是 children。The children see... 中主语是复数，child 要变成 children。"
+                }
+            ]
+        },
+        {
+            "blankNo": 2,
+            "correctAnswers": [
+                "near"
+            ],
+            "acceptableAnswers": [
+                "by",
+                "beside",
+                "next to",
+                "at"
+            ],
+            "answerDisplay": "near",
+            "commonMistakes": []
+        },
+        {
+            "blankNo": 3,
+            "correctAnswers": [
+                "some"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "some",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "any"
+                    ],
+                    "hint": "这是肯定句，表示听到一些声音。",
+                    "diagnosis": "正确答案是 some。肯定句中表示“一些”通常用 some。"
+                }
+            ]
+        },
+        {
+            "blankNo": 4,
+            "correctAnswers": [
+                "behind"
+            ],
+            "acceptableAnswers": [
+                "near",
+                "around",
+                "beside",
+                "by",
+                "next to"
+            ],
+            "answerDisplay": "behind",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "in"
+                    ],
+                    "hint": "声音是在袋子里面，还是在袋子附近/后面？看后面他们会不会打开袋子。",
+                    "diagnosis": "这里不建议写 in the bag。后面孩子们还要打开袋子找 treasure；如果他们正在怀疑老鼠在袋子里面，就不会直接打开袋子。所以声音应理解为在袋子附近/后面，用 behind / near / around 等更合理。"
+                }
+            ]
+        },
+        {
+            "blankNo": 5,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some"
+                    ],
+                    "hint": "Are there...? 是一般疑问句，some 通常要变成什么？",
+                    "diagnosis": "正确答案是 any。Are there any mice...? 是一般疑问句，问有没有老鼠。"
+                }
+            ]
+        },
+        {
+            "blankNo": 6,
+            "correctAnswers": [
+                "Is"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "Is",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "Are",
+                        "are"
+                    ],
+                    "hint": "treasure 在这里按不可数名词看，there be 用 is 还是 are？",
+                    "diagnosis": "正确答案是 Is。treasure 在这里按不可数名词看，所以是 Is there any treasure?"
+                }
+            ]
+        },
+        {
+            "blankNo": 7,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some"
+                    ],
+                    "hint": "Is there...? 是一般疑问句，some 通常变成 any。",
+                    "diagnosis": "正确答案是 any。Is there any treasure? 是一般疑问句。"
+                }
+            ]
+        },
+        {
+            "blankNo": 8,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some",
+                        "much"
+                    ],
+                    "hint": "括号给的是 some；否定句里 some 通常变成 any。",
+                    "diagnosis": "正确答案是 any。There isn’t any gold in the bag. 这里表示袋子里没有金子，不是考 much/many。"
+                }
+            ]
+        }
     ],
-    "explanation": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
+    "explanation": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
     "explanationSteps": [
-      "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。"
+        "child 变复数 children，后面动词用 see。",
+        "old bag near/by/beside the old gate：袋子在旧门附近。",
+        "肯定句 They hear some noise，用 some。",
+        "声音在袋子后面或附近，用 behind / near / around 等；不要写 in the bag。",
+        "Are there...? 是一般疑问句，some mice 变 any mice。",
+        "treasure 在这里按不可数名词看：Is there any treasure in the bag?",
+        "否定句 There isn’t any gold... 表示没有金子。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
-    "confusePoints": [],
+    "fallbackHint": "先按故事链读：看到袋子 → 听到声音 → 怀疑老鼠 → 猜有没有 treasure → 打开后没有 gold。",
+    "fallbackDiagnosis": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
+    "confusePoints": [
+        "some 肯定句 vs any 疑问/否定句",
+        "noise behind/near the bag，不是 in the bag",
+        "treasure/gold 在这里按不可数名词看",
+        "child → children"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
+},
   {
     "id": "sim-2-013",
     "topic": "some/any/many/much",
@@ -40423,7 +40874,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "改句题",
     "difficulty": "偏难",
-    "question": "Alice often visits Grandma [[em]]twice a month[[/em]]. 对加粗斜体部分提问：{blank1} {blank2} {blank3} Alice {blank4} Grandma?",
+    "question": "Alice often visits Grandma [[em]]twice a month[[/em]]. 对加粗斜体部分提问：{{blank1}} {{blank2}} {{blank3}} Alice {{blank4}} Grandma?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -40495,7 +40946,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "改句题",
     "difficulty": "偏难",
-    "question": "The girls are practising a song [[em]]in the music room[[/em]]. 对加粗斜体部分提问：{blank1} {blank2} the girls practising a song?",
+    "question": "The girls are practising a song [[em]]in the music room[[/em]]. 对加粗斜体部分提问：{{blank1}} {{blank2}} the girls practising a song?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -41115,7 +41566,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "There isn’t {{blank1}} water in the bottle, but there are {{blank2}} cups on the table.",
+    "question": "There isn’t {{blank1}} (some) water in the bottle, but there are {{blank2}} (some) cups on the table.",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -41213,7 +41664,7 @@ document.addEventListener("DOMContentLoaded", function(){
   },
   {
     "id": "sim-3-011",
-    "topic": "some/any/many/much",
+    "topic": "节日语篇：some/any",
     "paper": "考前模拟",
     "section": "综合模拟卷 C",
     "questionNo": "11",
@@ -41221,52 +41672,137 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "Would you like {blank1} Double Ninth cakes? There aren’t {blank2} biscuits left.",
+    "question": "{{blank1}} (介词) the Double Ninth Festival, the children visit Grandma Li. They bring {{blank2}} (some) flowers and {{blank3}} (some) Double Ninth cakes to her. Grandma Li says, “There isn’t {{blank4}} (some) tea left. Would you like {{blank5}} (some) water?”",
     "decisionWords": {
       "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+      "structureTriggers": [
+        "There isn’t",
+        "Would you like"
+      ],
+      "prepositionTriggers": [
+        "festival"
+      ],
+      "otherTriggers": [
+        "some",
+        "any",
+        "Grandma Li",
+        "flowers",
+        "Double Ninth cakes",
+        "家庭场景"
+      ]
     },
-    "decisionRule": "Would you like...? 表示邀请，常用 some；否定句用 any。",
+    "decisionRule": "按教材口径使用 the Double Ninth Festival 和 Grandma Li：孩子们在重阳节看望 Grandma Li，带来花和重阳糕；茶没有了，Grandma Li 改问要不要水。Double Ninth cakes 要注意大小写；节日期间可用 at/during；肯定句和邀请句用 some，否定句用 any。",
     "knowledgeTags": [
+      "the Double Ninth Festival",
+      "Grandma Li",
+      "Double Ninth cakes",
       "some/any",
-      "可数不可数"
+      "介词"
     ],
     "blanks": [
       {
         "blankNo": 1,
         "correctAnswers": [
-          "some"
+          "at"
         ],
-        "acceptableAnswers": [],
-        "answerDisplay": "some",
+        "acceptableAnswers": [
+          "during"
+        ],
+        "answerDisplay": "At",
         "commonMistakes": []
       },
       {
         "blankNo": 2,
         "correctAnswers": [
+          "some"
+        ],
+        "acceptableAnswers": [],
+        "answerDisplay": "some",
+        "commonMistakes": [
+          {
+            "answers": [
+              "any"
+            ],
+            "hint": "这是肯定句，表示带来一些花，通常用 some。",
+            "diagnosis": "正确答案是 some。肯定句中表示“一些”通常用 some。"
+          }
+        ]
+      },
+      {
+        "blankNo": 3,
+        "correctAnswers": [
+          "some"
+        ],
+        "acceptableAnswers": [],
+        "answerDisplay": "some",
+        "commonMistakes": [
+          {
+            "answers": [
+              "any"
+            ],
+            "hint": "这是肯定句，表示带来一些重阳糕，通常用 some。",
+            "diagnosis": "正确答案是 some。肯定句中表示“一些”通常用 some。Double Ninth cakes 注意大小写。"
+          }
+        ]
+      },
+      {
+        "blankNo": 4,
+        "correctAnswers": [
           "any"
         ],
         "acceptableAnswers": [],
         "answerDisplay": "any",
-        "commonMistakes": []
+        "commonMistakes": [
+          {
+            "answers": [
+              "some"
+            ],
+            "hint": "这是 There isn’t... 否定句，some 通常变成什么？",
+            "diagnosis": "正确答案是 any。否定句 There isn’t any... 表示没有。"
+          }
+        ]
+      },
+      {
+        "blankNo": 5,
+        "correctAnswers": [
+          "some"
+        ],
+        "acceptableAnswers": [],
+        "answerDisplay": "some",
+        "commonMistakes": [
+          {
+            "answers": [
+              "any"
+            ],
+            "hint": "Would you like...? 是礼貌邀请，通常用 some。",
+            "diagnosis": "正确答案是 some。Would you like some...? 是礼貌邀请，仍用 some。"
+          }
+        ]
       }
     ],
-    "explanation": "Would you like...? 表示邀请，常用 some；否定句用 any。",
+    "explanation": "按教材口径使用 the Double Ninth Festival 和 Grandma Li：孩子们在重阳节看望 Grandma Li，带来花和重阳糕；茶没有了，Grandma Li 改问要不要水。Double Ninth cakes 要注意大小写；节日期间可用 at/during；肯定句和邀请句用 some，否定句用 any。",
     "explanationSteps": [
-      "Would you like...? 表示邀请，常用 some；否定句用 any。"
+      "先看节日/家庭场景，确认前后句是同一个小故事。",
+      "第1空是节日期间的介词，at/during 都可；本题主答案用 At。",
+      "教材口径是 the Double Ninth Festival；人物可用 Grandma Li。",
+      "肯定句中表示“一些”用 some。",
+      "There isn’t... 是否定句，some 变 any。",
+      "Would you like some...? 是礼貌邀请，仍用 some。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "Would you like...? 表示邀请，常用 some；否定句用 any。",
-    "confusePoints": [],
+    "fallbackHint": "先读成小故事：重阳节看望 Grandma Li → 带花和重阳糕 → 茶没有了 → Grandma Li 改问要不要水。",
+    "fallbackDiagnosis": "按教材口径使用 the Double Ninth Festival 和 Grandma Li：孩子们在重阳节看望 Grandma Li，带来花和重阳糕；茶没有了，Grandma Li 改问要不要水。肯定句和邀请句用 some，否定句用 any。",
+    "confusePoints": [
+      "the Double Ninth Festival 里的 the 不要漏",
+      "Double Ninth cakes 注意大小写",
+      "some/any 要看句型和语气",
+      "节日和家庭文化语境要一致"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
-  {
+  },  {
     "id": "sim-3-012",
-    "topic": "some/any/many/much",
+    "topic": "综合语篇填空",
     "paper": "考前模拟",
     "section": "综合模拟卷 C",
     "questionNo": "12",
@@ -41274,49 +41810,200 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "Are there {{blank1}} mice near the old gate? There is not {{blank2}} gold in the bag.",
+    "question": "The {{blank1}} (child) see an old bag {{blank2}} (介词) the old gate. They hear {{blank3}} (some) noise {{blank4}} (介词) the bag and say, “Are there {{blank5}} (some) mice near the old gate? {{blank6}} (be) there {{blank7}} (some) treasure in the bag?” Then they open the bag, but there isn’t {{blank8}} (some) gold in the bag.",
     "decisionWords": {
-      "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+        "tenseTriggers": [],
+        "structureTriggers": [
+            "Are there",
+            "Is there",
+            "There isn’t"
+        ],
+        "prepositionTriggers": [
+            "old bag",
+            "old gate",
+            "noise",
+            "bag"
+        ],
+        "otherTriggers": [
+            "child",
+            "some",
+            "treasure",
+            "gold"
+        ]
     },
-    "decisionRule": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
+    "decisionRule": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
     "knowledgeTags": [
-      "some/any",
-      "可数不可数"
+        "语篇逻辑",
+        "some/any",
+        "There be",
+        "介词",
+        "child复数"
     ],
     "blanks": [
-      {
-        "blankNo": 1,
-        "correctAnswers": [
-          "any"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "any",
-        "commonMistakes": []
-      },
-      {
-        "blankNo": 2,
-        "correctAnswers": [
-          "much"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "much",
-        "commonMistakes": []
-      }
+        {
+            "blankNo": 1,
+            "correctAnswers": [
+                "children"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "children",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "child"
+                    ],
+                    "hint": "后面的动词是 see，主语应该是单数还是复数？",
+                    "diagnosis": "正确答案是 children。The children see... 中主语是复数，child 要变成 children。"
+                }
+            ]
+        },
+        {
+            "blankNo": 2,
+            "correctAnswers": [
+                "near"
+            ],
+            "acceptableAnswers": [
+                "by",
+                "beside",
+                "next to",
+                "at"
+            ],
+            "answerDisplay": "near",
+            "commonMistakes": []
+        },
+        {
+            "blankNo": 3,
+            "correctAnswers": [
+                "some"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "some",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "any"
+                    ],
+                    "hint": "这是肯定句，表示听到一些声音。",
+                    "diagnosis": "正确答案是 some。肯定句中表示“一些”通常用 some。"
+                }
+            ]
+        },
+        {
+            "blankNo": 4,
+            "correctAnswers": [
+                "behind"
+            ],
+            "acceptableAnswers": [
+                "near",
+                "around",
+                "beside",
+                "by",
+                "next to"
+            ],
+            "answerDisplay": "behind",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "in"
+                    ],
+                    "hint": "声音是在袋子里面，还是在袋子附近/后面？看后面他们会不会打开袋子。",
+                    "diagnosis": "这里不建议写 in the bag。后面孩子们还要打开袋子找 treasure；如果他们正在怀疑老鼠在袋子里面，就不会直接打开袋子。所以声音应理解为在袋子附近/后面，用 behind / near / around 等更合理。"
+                }
+            ]
+        },
+        {
+            "blankNo": 5,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some"
+                    ],
+                    "hint": "Are there...? 是一般疑问句，some 通常要变成什么？",
+                    "diagnosis": "正确答案是 any。Are there any mice...? 是一般疑问句，问有没有老鼠。"
+                }
+            ]
+        },
+        {
+            "blankNo": 6,
+            "correctAnswers": [
+                "Is"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "Is",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "Are",
+                        "are"
+                    ],
+                    "hint": "treasure 在这里按不可数名词看，there be 用 is 还是 are？",
+                    "diagnosis": "正确答案是 Is。treasure 在这里按不可数名词看，所以是 Is there any treasure?"
+                }
+            ]
+        },
+        {
+            "blankNo": 7,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some"
+                    ],
+                    "hint": "Is there...? 是一般疑问句，some 通常变成 any。",
+                    "diagnosis": "正确答案是 any。Is there any treasure? 是一般疑问句。"
+                }
+            ]
+        },
+        {
+            "blankNo": 8,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some",
+                        "much"
+                    ],
+                    "hint": "括号给的是 some；否定句里 some 通常变成 any。",
+                    "diagnosis": "正确答案是 any。There isn’t any gold in the bag. 这里表示袋子里没有金子，不是考 much/many。"
+                }
+            ]
+        }
     ],
-    "explanation": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
+    "explanation": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
     "explanationSteps": [
-      "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。"
+        "child 变复数 children，后面动词用 see。",
+        "old bag near/by/beside the old gate：袋子在旧门附近。",
+        "肯定句 They hear some noise，用 some。",
+        "声音在袋子后面或附近，用 behind / near / around 等；不要写 in the bag。",
+        "Are there...? 是一般疑问句，some mice 变 any mice。",
+        "treasure 在这里按不可数名词看：Is there any treasure in the bag?",
+        "否定句 There isn’t any gold... 表示没有金子。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
-    "confusePoints": [],
+    "fallbackHint": "先按故事链读：看到袋子 → 听到声音 → 怀疑老鼠 → 猜有没有 treasure → 打开后没有 gold。",
+    "fallbackDiagnosis": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
+    "confusePoints": [
+        "some 肯定句 vs any 疑问/否定句",
+        "noise behind/near the bag，不是 in the bag",
+        "treasure/gold 在这里按不可数名词看",
+        "child → children"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
+},
   {
     "id": "sim-3-013",
     "topic": "some/any/many/much",
@@ -41972,7 +42659,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "改句题",
     "difficulty": "偏难",
-    "question": "Kitty often visits Grandma [[em]]twice a month[[/em]]. 对加粗斜体部分提问：{blank1} {blank2} {blank3} Kitty {blank4} Grandma?",
+    "question": "Kitty often visits Grandma [[em]]twice a month[[/em]]. 对加粗斜体部分提问：{{blank1}} {{blank2}} {{blank3}} Kitty {{blank4}} Grandma?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -42044,7 +42731,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "改句题",
     "difficulty": "偏难",
-    "question": "The girls are practising a song [[em]]in the library[[/em]]. 对加粗斜体部分提问：{blank1} {blank2} the girls practising a song?",
+    "question": "The girls are practising a song [[em]]in the library[[/em]]. 对加粗斜体部分提问：{{blank1}} {{blank2}} the girls practising a song?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -42664,7 +43351,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "There isn’t {{blank1}} water in the bottle, but there are {{blank2}} cups on the table.",
+    "question": "There isn’t {{blank1}} (some) water in the bottle, but there are {{blank2}} (some) cups on the table.",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -42762,7 +43449,7 @@ document.addEventListener("DOMContentLoaded", function(){
   },
   {
     "id": "sim-4-011",
-    "topic": "some/any/many/much",
+    "topic": "节日语篇：some/any",
     "paper": "考前模拟",
     "section": "综合模拟卷 D",
     "questionNo": "11",
@@ -42770,52 +43457,116 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "Would you like {blank1} red envelopes? There aren’t {blank2} biscuits left.",
+    "question": "{{blank1}} (介词) the Spring Festival, the children visit their grandparents. They get {{blank2}} (some) red envelopes. Grandma says, “There aren’t {{blank3}} (some) rice cakes left. Would you like {{blank4}} (some) dumplings?”",
     "decisionWords": {
-      "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+        "tenseTriggers": [],
+        "structureTriggers": [
+            "There aren’t",
+            "Would you like"
+        ],
+        "prepositionTriggers": [
+            "festival"
+        ],
+        "otherTriggers": [
+            "some",
+            "any",
+            "节日食物",
+            "家庭场景"
+        ]
     },
-    "decisionRule": "Would you like...? 表示邀请，常用 some；否定句用 any。",
+    "decisionRule": "春节孩子们去看望祖父母，长辈给孩子红包；年糕没有了，奶奶改问要不要饺子。春节期间按本册知识点用 during；肯定句和邀请句用 some，否定句用 any。",
     "knowledgeTags": [
-      "some/any",
-      "可数不可数"
+        "Spring Festival",
+        "red envelopes",
+        "rice cakes",
+        "dumplings",
+        "some/any",
+        "介词"
     ],
     "blanks": [
-      {
-        "blankNo": 1,
-        "correctAnswers": [
-          "some"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "some",
-        "commonMistakes": []
-      },
-      {
-        "blankNo": 2,
-        "correctAnswers": [
-          "any"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "any",
-        "commonMistakes": []
-      }
+        {
+            "blankNo": 1,
+            "correctAnswers": [
+                "during"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "During",
+            "commonMistakes": []
+        },
+        {
+            "blankNo": 2,
+            "correctAnswers": [
+                "some"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "some",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "any"
+                    ],
+                    "hint": "这是肯定句或礼貌邀请句，通常用 some。",
+                    "diagnosis": "正确答案是 some。肯定句和 Would you like some...? 这类礼貌邀请中常用 some。"
+                }
+            ]
+        },
+        {
+            "blankNo": 3,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some"
+                    ],
+                    "hint": "这是 There aren’t... 否定句，some 通常变成什么？",
+                    "diagnosis": "正确答案是 any。否定句 There aren’t any... 表示没有。"
+                }
+            ]
+        },
+        {
+            "blankNo": 4,
+            "correctAnswers": [
+                "some"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "some",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "any"
+                    ],
+                    "hint": "这是肯定句或礼貌邀请句，通常用 some。",
+                    "diagnosis": "正确答案是 some。肯定句和 Would you like some...? 这类礼貌邀请中常用 some。"
+                }
+            ]
+        }
     ],
-    "explanation": "Would you like...? 表示邀请，常用 some；否定句用 any。",
+    "explanation": "春节孩子们去看望祖父母，长辈给孩子红包；年糕没有了，奶奶改问要不要饺子。春节期间按本册知识点用 during；肯定句和邀请句用 some，否定句用 any。",
     "explanationSteps": [
-      "Would you like...? 表示邀请，常用 some；否定句用 any。"
+        "先看春节/家庭场景，确认前后句是同一个小故事。",
+        "第1空是“在春节期间”，按本册知识点用 During the Spring Festival。",
+        "肯定句中表示“一些”用 some。",
+        "There aren’t... 是否定句，some 变 any。",
+        "Would you like some...? 是礼貌邀请，仍用 some。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "Would you like...? 表示邀请，常用 some；否定句用 any。",
-    "confusePoints": [],
+    "fallbackHint": "先读成小故事：节日家庭活动 → 某种传统食物没有了 → 长辈换一种食物来问孩子要不要。",
+    "fallbackDiagnosis": "春节孩子们去看望祖父母，长辈给孩子红包；年糕没有了，奶奶改问要不要饺子。春节期间按本册知识点用 during；肯定句和邀请句用 some，否定句用 any。",
+    "confusePoints": [
+        "some/any 要看句型和语气",
+        "节日食物要符合文化语境",
+        "Double Ninth cakes 注意大小写"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
+},
   {
     "id": "sim-4-012",
-    "topic": "some/any/many/much",
+    "topic": "综合语篇填空",
     "paper": "考前模拟",
     "section": "综合模拟卷 D",
     "questionNo": "12",
@@ -42823,49 +43574,200 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "some/any/many/much",
     "difficulty": "中等偏难",
-    "question": "Are there {{blank1}} mice near the old gate? There is not {{blank2}} gold in the bag.",
+    "question": "The {{blank1}} (child) see an old bag {{blank2}} (介词) the old gate. They hear {{blank3}} (some) noise {{blank4}} (介词) the bag and say, “Are there {{blank5}} (some) mice near the old gate? {{blank6}} (be) there {{blank7}} (some) treasure in the bag?” Then they open the bag, but there isn’t {{blank8}} (some) gold in the bag.",
     "decisionWords": {
-      "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+        "tenseTriggers": [],
+        "structureTriggers": [
+            "Are there",
+            "Is there",
+            "There isn’t"
+        ],
+        "prepositionTriggers": [
+            "old bag",
+            "old gate",
+            "noise",
+            "bag"
+        ],
+        "otherTriggers": [
+            "child",
+            "some",
+            "treasure",
+            "gold"
+        ]
     },
-    "decisionRule": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
+    "decisionRule": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
     "knowledgeTags": [
-      "some/any",
-      "可数不可数"
+        "语篇逻辑",
+        "some/any",
+        "There be",
+        "介词",
+        "child复数"
     ],
     "blanks": [
-      {
-        "blankNo": 1,
-        "correctAnswers": [
-          "any"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "any",
-        "commonMistakes": []
-      },
-      {
-        "blankNo": 2,
-        "correctAnswers": [
-          "much"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "much",
-        "commonMistakes": []
-      }
+        {
+            "blankNo": 1,
+            "correctAnswers": [
+                "children"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "children",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "child"
+                    ],
+                    "hint": "后面的动词是 see，主语应该是单数还是复数？",
+                    "diagnosis": "正确答案是 children。The children see... 中主语是复数，child 要变成 children。"
+                }
+            ]
+        },
+        {
+            "blankNo": 2,
+            "correctAnswers": [
+                "near"
+            ],
+            "acceptableAnswers": [
+                "by",
+                "beside",
+                "next to",
+                "at"
+            ],
+            "answerDisplay": "near",
+            "commonMistakes": []
+        },
+        {
+            "blankNo": 3,
+            "correctAnswers": [
+                "some"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "some",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "any"
+                    ],
+                    "hint": "这是肯定句，表示听到一些声音。",
+                    "diagnosis": "正确答案是 some。肯定句中表示“一些”通常用 some。"
+                }
+            ]
+        },
+        {
+            "blankNo": 4,
+            "correctAnswers": [
+                "behind"
+            ],
+            "acceptableAnswers": [
+                "near",
+                "around",
+                "beside",
+                "by",
+                "next to"
+            ],
+            "answerDisplay": "behind",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "in"
+                    ],
+                    "hint": "声音是在袋子里面，还是在袋子附近/后面？看后面他们会不会打开袋子。",
+                    "diagnosis": "这里不建议写 in the bag。后面孩子们还要打开袋子找 treasure；如果他们正在怀疑老鼠在袋子里面，就不会直接打开袋子。所以声音应理解为在袋子附近/后面，用 behind / near / around 等更合理。"
+                }
+            ]
+        },
+        {
+            "blankNo": 5,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some"
+                    ],
+                    "hint": "Are there...? 是一般疑问句，some 通常要变成什么？",
+                    "diagnosis": "正确答案是 any。Are there any mice...? 是一般疑问句，问有没有老鼠。"
+                }
+            ]
+        },
+        {
+            "blankNo": 6,
+            "correctAnswers": [
+                "Is"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "Is",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "Are",
+                        "are"
+                    ],
+                    "hint": "treasure 在这里按不可数名词看，there be 用 is 还是 are？",
+                    "diagnosis": "正确答案是 Is。treasure 在这里按不可数名词看，所以是 Is there any treasure?"
+                }
+            ]
+        },
+        {
+            "blankNo": 7,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some"
+                    ],
+                    "hint": "Is there...? 是一般疑问句，some 通常变成 any。",
+                    "diagnosis": "正确答案是 any。Is there any treasure? 是一般疑问句。"
+                }
+            ]
+        },
+        {
+            "blankNo": 8,
+            "correctAnswers": [
+                "any"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "any",
+            "commonMistakes": [
+                {
+                    "answers": [
+                        "some",
+                        "much"
+                    ],
+                    "hint": "括号给的是 some；否定句里 some 通常变成 any。",
+                    "diagnosis": "正确答案是 any。There isn’t any gold in the bag. 这里表示袋子里没有金子，不是考 much/many。"
+                }
+            ]
+        }
     ],
-    "explanation": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
+    "explanation": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
     "explanationSteps": [
-      "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。"
+        "child 变复数 children，后面动词用 see。",
+        "old bag near/by/beside the old gate：袋子在旧门附近。",
+        "肯定句 They hear some noise，用 some。",
+        "声音在袋子后面或附近，用 behind / near / around 等；不要写 in the bag。",
+        "Are there...? 是一般疑问句，some mice 变 any mice。",
+        "treasure 在这里按不可数名词看：Is there any treasure in the bag?",
+        "否定句 There isn’t any gold... 表示没有金子。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "第1空是一般疑问句 Are there any mice...?，问“有没有”，用 any。第2空 gold 是不可数名词，There is not much gold = 金子不多；如果写 any gold，会变成“没有任何金子”，意思不同。",
-    "confusePoints": [],
+    "fallbackHint": "先按故事链读：看到袋子 → 听到声音 → 怀疑老鼠 → 猜有没有 treasure → 打开后没有 gold。",
+    "fallbackDiagnosis": "先读故事链：孩子们在旧门旁看到袋子，听到袋子附近有声音，所以怀疑附近有老鼠；又猜袋子里有没有 treasure，打开后发现没有 gold。再看语法：child 要变复数 children，后面用 see；第2空是地点介词，可用 near/by/beside；肯定句 They hear some noise 用 some；第4空写 behind/near/around the bag，不写 in the bag，因为如果声音在袋子里面、还怀疑里面有老鼠，孩子们就不太可能直接打开袋子；Are there 后接复数 mice，疑问句里 some 变 any；treasure 和 gold 在这里按不可数名词看，所以用 Is there any treasure in the bag? 和 There isn’t any gold.",
+    "confusePoints": [
+        "some 肯定句 vs any 疑问/否定句",
+        "noise behind/near the bag，不是 in the bag",
+        "treasure/gold 在这里按不可数名词看",
+        "child → children"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
+},
   {
     "id": "sim-4-013",
     "topic": "some/any/many/much",
@@ -43150,49 +44052,58 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "介词填空",
     "difficulty": "中等偏难",
-    "question": "We eat special food {{blank1}} the Spring Festival. The festival is usually {{blank2}} September or October.",
+    "question": "Children get red envelopes {{blank1}} the Spring Festival. The festival is usually {{blank2}} January or February.",
     "decisionWords": {
-      "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+        "tenseTriggers": [],
+        "structureTriggers": [],
+        "prepositionTriggers": [],
+        "otherTriggers": []
     },
-    "decisionRule": "节日活动/节日期间看搭配；月份前用 in。",
+    "decisionRule": "春节孩子从长辈那里得到红包；春节期间用 during the Spring Festival，月份前用 in。春节通常在 January or February。",
     "knowledgeTags": [
-      "介词",
-      "固定搭配"
+        "介词",
+        "Spring Festival",
+        "red envelopes",
+        "月份"
     ],
     "blanks": [
-      {
-        "blankNo": 1,
-        "correctAnswers": [
-          "during"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "during",
-        "commonMistakes": []
-      },
-      {
-        "blankNo": 2,
-        "correctAnswers": [
-          "in"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "in",
-        "commonMistakes": []
-      }
+        {
+            "blankNo": 1,
+            "correctAnswers": [
+                "during"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "during",
+            "commonMistakes": []
+        },
+        {
+            "blankNo": 2,
+            "correctAnswers": [
+                "in"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "in",
+            "commonMistakes": []
+        }
     ],
-    "explanation": "节日活动/节日期间看搭配；月份前用 in。",
+    "explanation": "春节孩子从长辈那里得到红包；春节期间用 during the Spring Festival，月份前用 in。春节通常在 January or February。",
     "explanationSteps": [
-      "节日活动/节日期间看搭配；月份前用 in。"
+        "red envelopes 要放在春节、孩子、长辈的文化语境里。",
+        "during the Spring Festival 表示春节期间，和知识点整理保持一致。",
+        "January or February 是月份，用 in。"
     ],
-    "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "节日活动/节日期间看搭配；月份前用 in。",
-    "confusePoints": [],
+    "fallbackHint": "春节、红包、January or February；月份前用 in。",
+    "fallbackDiagnosis": "正确答案：during / in。春节通常在 January or February，不是 September or October。",
+    "confusePoints": [
+        "Spring Festival 通常在 January or February",
+        "红包是长辈给孩子",
+        "春节期间用 during the Spring Festival",
+        "月份前用 in"
+    ],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
+},
   {
     "id": "sim-4-019",
     "topic": "陷阱选择题",
@@ -43521,7 +44432,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "改句题",
     "difficulty": "偏难",
-    "question": "Ben often visits Grandma [[em]]twice a month[[/em]]. 对加粗斜体部分提问：{blank1} {blank2} {blank3} Ben {blank4} Grandma?",
+    "question": "Ben often visits Grandma [[em]]twice a month[[/em]]. 对加粗斜体部分提问：{{blank1}} {{blank2}} {{blank3}} Ben {{blank4}} Grandma?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -43593,7 +44504,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "multi-blank",
     "category": "改句题",
     "difficulty": "偏难",
-    "question": "The girls are practising a song [[em]]in the classroom[[/em]]. 对加粗斜体部分提问：{blank1} {blank2} the girls practising a song?",
+    "question": "The girls are practising a song [[em]]in the classroom[[/em]]. 对加粗斜体部分提问：{{blank1}} {{blank2}} the girls practising a song?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -44323,7 +45234,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "single-blank",
     "category": "高频易错",
     "difficulty": "中等偏难",
-    "question": "There aren’t {{blank1}} old people in the room.",
+    "question": "There aren’t {{blank1}} (some) old people in the room.",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -44366,7 +45277,7 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "single-blank",
     "category": "高频易错",
     "difficulty": "中等偏难",
-    "question": "Would you like {{blank1}} tea?",
+    "question": "Would you like {{blank1}} (some) tea?",
     "decisionWords": {
       "tenseTriggers": [],
       "structureTriggers": [],
@@ -47149,40 +48060,42 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "single-blank",
     "category": "陷阱选择题",
     "difficulty": "偏难",
-    "question": "Which sentence is right? A. Happy the Double Ninth Festival!  B. Happy Double Ninth Festival!  C. Happy a Double Ninth Festival!  D. Happy Double Ninth Festival the!",
+    "question": "Which group is right? A. Happy the Double Ninth Festival, Grandma Li. / Happy Children's Day!  B. Happy Double Ninth Festival, Grandma Li. / Happy the Children's Day!  C. Happy the Double Ninth Festival, Grandma Li. / Happy the Children's Day!  D. Happy Double Ninth Festival, Grandma Li. / Happy Children's Day the!",
     "decisionWords": {
-      "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": []
+        "tenseTriggers": [],
+        "structureTriggers": [],
+        "prepositionTriggers": [],
+        "otherTriggers": []
     },
-    "decisionRule": "课本句型是 Happy the Double Ninth Festival! 节日前有 the。",
+    "decisionRule": "按教材口径：the Double Ninth Festival 带 the；Children’s Day 不加 the。判断整组选项时，两个节日表达都要正确。",
     "knowledgeTags": [
-      "选择题",
-      "偏题挑战"
+        "选择题",
+        "偏题挑战"
     ],
     "blanks": [
-      {
-        "blankNo": 1,
-        "correctAnswers": [
-          "A"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "A",
-        "commonMistakes": []
-      }
+        {
+            "blankNo": 1,
+            "correctAnswers": [
+                "A"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "A",
+            "commonMistakes": []
+        }
     ],
-    "explanation": "课本句型是 Happy the Double Ninth Festival! 节日前有 the。",
+    "explanation": "按教材口径：Happy the Double Ninth Festival, Grandma Li.；Happy Children’s Day!。Double Ninth Festival 这类教材传统节日名称带 the，Children’s Day 这类 Day 节日不加 the。",
     "explanationSteps": [
-      "课本句型是 Happy the Double Ninth Festival! 节日前有 the。"
+        "教材口径：the Double Ninth Festival 带 the，所以写 Happy the Double Ninth Festival, Grandma Li.",
+        "Children’s Day 是 Day 类节日，不加 the，所以写 Happy Children’s Day!",
+        "判断整组选项时，两个句子都要对，不能只看其中一句。"
     ],
     "fallbackHint": "先找题眼，不要急着翻译整句。",
-    "fallbackDiagnosis": "课本句型是 Happy the Double Ninth Festival! 节日前有 the。",
+    "fallbackDiagnosis": "正确答案是 A。the Double Ninth Festival 带 the；Children’s Day 不加 the。",
     "confusePoints": [],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
+},
   {
     "id": "sim-6-014",
     "topic": "陷阱选择题",
@@ -48339,10 +49252,10 @@ document.addEventListener("DOMContentLoaded", function(){
       {
         "blankNo": 2,
         "correctAnswers": [
-          "much"
+          "any"
         ],
         "acceptableAnswers": [],
-        "answerDisplay": "much",
+        "answerDisplay": "any",
         "commonMistakes": []
       }
     ],
@@ -50218,44 +51131,45 @@ document.addEventListener("DOMContentLoaded", function(){
     "inputMode": "single-blank",
     "category": "用所给词适当形式",
     "difficulty": "中等偏难",
-    "question": "At the Spring Festival, children can {{blank1}} (get) money in red envelopes.",
+    "question": "During the Spring Festival, children can {{blank1}} (get) money in red envelopes.",
     "decisionWords": {
-      "tenseTriggers": [],
-      "structureTriggers": [],
-      "prepositionTriggers": [],
-      "otherTriggers": [
-        "节日与时间表达"
-      ]
+        "tenseTriggers": [],
+        "structureTriggers": [],
+        "prepositionTriggers": [],
+        "otherTriggers": [
+            "节日与时间表达"
+        ]
     },
-    "decisionRule": "can 后面用动词原形 get。",
+    "decisionRule": "During the Spring Festival 表示“在春节期间”；can 后面用动词原形 get。",
     "knowledgeTags": [
-      "节日与时间表达",
-      "情态动词",
-      "can + 原形",
-      "red envelopes"
+        "节日与时间表达",
+        "情态动词",
+        "can + 原形",
+        "red envelopes"
     ],
     "blanks": [
-      {
-        "blankNo": 1,
-        "correctAnswers": [
-          "get"
-        ],
-        "acceptableAnswers": [],
-        "answerDisplay": "get",
-        "commonMistakes": []
-      }
+        {
+            "blankNo": 1,
+            "correctAnswers": [
+                "get"
+            ],
+            "acceptableAnswers": [],
+            "answerDisplay": "get",
+            "commonMistakes": []
+        }
     ],
-    "explanation": "can 后面用动词原形 get。",
+    "explanation": "During the Spring Festival 表示“在春节期间”；can 后面用动词原形 get。",
     "explanationSteps": [
-      "can 后面用动词原形 get。"
+        "During the Spring Festival 表示“在春节期间”。",
+        "can 后面用动词原形 get。"
     ],
     "fallbackHint": "先看节日名称、月份、天气、顺序或固定搭配。",
-    "fallbackDiagnosis": "can 后面用动词原形 get。",
+    "fallbackDiagnosis": "During the Spring Festival 表示“在春节期间”；can 后面用动词原形 get。",
     "confusePoints": [],
     "extraPractice": [],
     "referenceAnswers": [],
     "answerFrame": ""
-  },
+},
   {
     "id": "sim-festival-019",
     "topic": "节日动词",
@@ -52976,11 +53890,11 @@ document.addEventListener("DOMContentLoaded", function(){
       detail:"肯定句常用 some；否定句、普通疑问句常用 any；礼貌邀请/请求常用 some。"
     },
     {
-      id:"some-any-much-many-context", cat:"语境判断", tags:["some / any", "much / many", "语境优先", "可数不可数"], title:"some / any / much / many：语法对，也要看语境",
-      qHtml:"<div>① There isn’t ____ water in the bottle, but there are ____ cups on the table.</div><div>② There is not ____ gold in the bag.</div><div>③ There isn’t ____ music in the hall, but there are ____ instruments on the floor.</div>",
-      good:["① any / some", "② much", "③ much / many"], okay:["There isn't any music（语法对，但意思变成‘没有音乐’）", "There isn't any bread（语法对，但意思变成‘没有面包’）"], bad:["只看否定句就全部填 any", "只看不可数名词就全部填 much", "不看题目/选项想考 some 还是 many"],
-      remind:"这类题不能只背‘否定句用 any’或‘不可数用 much’。语法上 any water / any music 可以成立，但意思是‘没有任何……’；much water / much music 是‘不多’。做题时要看上下文和题目提供的选项：如果后面搭配 some cups，就是 some/any 语境题；如果选项成组考 much/many，就按不可数/可数复数判断。",
-      detail:"判断顺序：① 先看题目想表达‘没有’还是‘不多’；② 再看名词可数不可数：water/music/gold/bread 不可数，instruments/biscuits/cups 可数复数；③ 最后看选项。如果题目给的是 any/some，就考‘否定/疑问 vs 肯定’；如果题目给的是 much/many，就考‘不可数 vs 可数复数’。所以 There isn’t any water = 没有水；There isn’t much water = 水不多，两个都可能语法对，但语境和题目目标不同。"
+      id:"some-any-much-many-context", cat:"语境判断", tags:["some / any", "much / many", "语境优先", "可数不可数"], title:"some / any / much / many：先看题目到底考什么",
+      qHtml:"<div>① There isn’t ____ (some) water in the bottle, but there are ____ (some) cups on the table.</div><div>② There isn’t ____ (some) gold in the bag.</div><div>③ There isn’t ____ music in the hall, but there are ____ instruments on the floor.</div>",
+      good:["① any / some", "② any", "③ much / many（选择题给出 much/many 时）"], okay:["There isn't much water / gold（语法可成立，但表示‘不多’，不是本题默认目标）"], bad:["看到否定句就乱填 much", "看到不可数名词就把 any 改成 much", "不看括号和选项范围"],
+      remind:"小学 4B 开放填空里，如果括号给的是 some，否定句通常考 some → any，表示‘没有’。much / many 是数量表达，只有题目明确考 How much / How many、too much / too many，或选项/括号给出 many 时，才按可数不可数判断。",
+      detail:"判断顺序：① 先看括号或选项给的是 some/any 还是 much/many；② 如果括号给 some，肯定句/邀请句多用 some，疑问句/否定句多用 any；③ 如果题目明确给 many 或选项集中考 much/many，再看名词可数不可数。There isn’t any water = 没有水，是 4B 否定句默认考法；There isn’t much water = 水不多，语法可成立，但不能随便拿来替代 any。"
     },
     {
       id:"which-festival", cat:"提问转换", tags:["Which festival","What festivals","单复数"], title:"Which festival / What festivals 要看问一个还是多个",
@@ -53076,11 +53990,13 @@ document.addEventListener("DOMContentLoaded", function(){
       detail:"Sunday is the first day of a week."
     },
     {
-      id:"happy-festival", cat:"节日表达", tags:["Happy ... Festival","the"], title:"祝福语里一般不说 Happy the ...",
-      q:"祝奶奶重阳节快乐。",
-      good:["Happy Double Ninth Festival, Grandma."], okay:["Happy Double Ninth Festival, Grandma Li."], bad:["Happy the Double Ninth Festival, Grandma."],
-      remind:"节日名称平时可说 the Double Ninth Festival；但祝福语里常说 Happy Double Ninth Festival!",
-      detail:"Happy + 节日名，中间一般不加 the。"
+      id:"happy-festival", cat:"节日表达", tags:["节日表达","the","Children's Day","教材口径"], title:"节日名称里的 the：Double Ninth 要有，Children's Day 不加",
+      q:"重阳节祝福、儿童节表达和节日介词中，什么时候加 the，什么时候不加？",
+      good:["Happy the Double Ninth Festival, Grandma Li.", "at the Double Ninth Festival", "Happy Children's Day!", "on Children's Day"],
+      okay:["the Spring Festival / the Dragon Boat Festival / the Mid-Autumn Festival / the Double Ninth Festival", "Children's Day / Mother's Day / Father's Day / New Year's Day"],
+      bad:["Happy Double Ninth Festival, Grandma Li.", "Happy the Children's Day!", "on the Children's Day"],
+      remind:"按教材口径分两类：传统节日名称常带 the，如 the Double Ninth Festival；Day 类节日名称通常不加 the，如 Children's Day。祝福语也要跟教材：Happy the Double Ninth Festival, Grandma Li.；但 Children's Day 仍不加 the。",
+      detail:"做题先看节日名称本身：① the + Festival：the Spring Festival, the Dragon Boat Festival, the Mid-Autumn Festival, the Double Ninth Festival；② 不加 the 的 Day 类：Children's Day, Mother's Day, Father's Day, New Year's Day。介词搭配也跟着名称走：at the Double Ninth Festival / on Children's Day。"
     },
     {
       id:"before-on-during-festival", cat:"节日时间", tags:["before / on / during","春节"], title:"春节时间介词要看事情发生在什么时候",
