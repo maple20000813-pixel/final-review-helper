@@ -2440,6 +2440,21 @@
   .wrongbook-card{
     padding-top:18px;
   }
+  /* 错题本二合一卡片：个人作答块 */
+  .wrong-detail-personal{
+    background:#fff7ed;
+    border:1px solid #f0d9b5;
+    border-radius:12px;
+    padding:12px 14px;
+    margin-bottom:12px;
+  }
+  .wrong-detail-personal .wd-row{
+    margin:4px 0;
+    font-size:15px;
+    line-height:1.6;
+  }
+  .wrong-detail-personal .wd-stu{ color:#b45309; font-weight:700; }
+  .wrong-detail-personal .wd-correct{ color:#15803d; font-weight:700; }
   .wrongbook-headline{
     display:flex;
     align-items:center;
@@ -3758,6 +3773,7 @@
             <option value="mixed">智能混合</option>
             <option value="focus">专项强化</option>
             <option value="phonics">听音辨音</option>
+            <option value="wrong">只练错题</option>
           </select>
         </div>
         <div class="full">
@@ -51119,16 +51135,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function findQuestionByWrongItem(item) {
     const key = item.questionKey || item.questionId || item.id;
-
-    return QUESTIONS.find(q =>
+    const match = q =>
       getQuestionKey(q) === key ||
       q.id === item.questionId ||
-      q.id === key
-    ) || (typeof SIM_QUESTIONS !== "undefined" ? SIM_QUESTIONS.find(q =>
-      getQuestionKey(q) === key ||
-      q.id === item.questionId ||
-      q.id === key
-    ) : null);
+      q.id === key;
+    return QUESTIONS.find(match)
+      || (typeof SIM_QUESTIONS !== "undefined" ? SIM_QUESTIONS.find(match) : null)
+      || (typeof PRACTICE_POOL !== "undefined" ? PRACTICE_POOL.find(match) : null);
   }
 
   function getQuestionCategory(q) {
@@ -52163,7 +52176,7 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelectorAll(".btn-show-wrong-answer").forEach(btn => {
       btn.addEventListener("click", () => {
         const key = btn.dataset.wrongKey;
-        toggleWrongAnswerArea(key);
+        openWrongDetailCard(key);
       });
     });
 
@@ -53531,6 +53544,73 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
   try { window.__openTeacherDetailCard = openTeacherDetailCard; } catch(e) {}
+
+  /* ====== 错题本：二合一讲评卡（个人作答 + 自动讲评） ====== */
+  function buildWrongbookCardData(item, q) {
+    q = q || {};
+    const blanks = Array.isArray(q.blanks) ? q.blanks : [];
+    const flat = (key) => blanks.reduce((acc,b)=> acc.concat(Array.isArray(b[key]) ? b[key] : []), []);
+    const good = flat("correctAnswers");
+    const okay = flat("acceptableAnswers");
+    const bad = blanks.reduce((acc,b)=>{
+      (Array.isArray(b.commonMistakes) ? b.commonMistakes : []).forEach(m=>{
+        (Array.isArray(m.answers) ? m.answers : []).forEach(a=>{ if (a) acc.push(a); });
+      });
+      return acc;
+    }, []);
+    const qText = String(q.question || item.question || "").replace(/\{\{?blank\d+\}?\}/g, "____");
+    return {
+      title: q.topic || item.category || "错题讲评",
+      tags: (Array.isArray(q.knowledgeTags) && q.knowledgeTags.length) ? q.knowledgeTags : (Array.isArray(item.knowledgeTags) ? item.knowledgeTags : []),
+      qHtml: esc(qText),
+      good: good.length ? good : (item.correctAnswer ? [item.correctAnswer] : []),
+      okay: okay,
+      bad: bad,
+      remind: q.decisionRule || "",
+      detail: (typeof getQuestionExplanation === "function" ? getQuestionExplanation(q) : "") || "",
+      source: item.sourceText || q.paper || "",
+      favoriteId: "wrong:" + (q.id || item.questionId || item.id || "")
+    };
+  }
+  function buildWrongPersonalBlockHtml(item, q) {
+    if (!item || (item.studentAnswer == null && !item.studentAnswers)) return "";
+    let stu;
+    if (Array.isArray(item.studentAnswers) && item.studentAnswers.length) {
+      stu = item.studentAnswers.map((a,i)=> item.studentAnswers.length > 1 ? `第${i+1}空 ${a || "（空）"}` : (a || "（空）")).join("　");
+    } else {
+      stu = String(item.studentAnswer || "未填写");
+    }
+    const correct = String(item.correctAnswer || (typeof getQuestionAnswerText === "function" ? getQuestionAnswerText(q || {}) : "") || "");
+    const times = item.wrongTimes || 1;
+    return `<div class="wrong-detail-personal">
+      <div class="wd-row"><b>你的原答案：</b><span class="wd-stu">${esc(stu)}</span></div>
+      <div class="wd-row"><b>正确答案：</b><span class="wd-correct">${esc(correct)}</span></div>
+      <div class="wd-row"><b>错误次数：</b>${esc(times)} 次</div>
+    </div>`;
+  }
+  function openWrongDetailCard(wrongKey) {
+    const list = getWrongBookList();
+    const item = list.find(x => getWrongItemKey(x) === wrongKey);
+    if (!item) return;
+    const q = findQuestionByWrongItem(item);
+    const cardData = buildWrongbookCardData(item, q);
+    const modal = document.getElementById("libraryExplainModal");
+    const title = document.getElementById("libraryExplainTitle");
+    const body = document.getElementById("libraryExplainBody");
+    if (!modal || !body) return;
+    if (title) title.textContent = cardData.title || "错题讲评";
+    body.innerHTML = buildWrongPersonalBlockHtml(item, q) + buildTeacherDetailCardHtml(cardData);
+    modal.classList.remove("hidden");
+    modal.setAttribute("aria-hidden", "false");
+    modal.onclick = (ev)=>{ if (ev.target === modal) closeTeacherDetailCard(); };
+    body.querySelectorAll("[data-teacher-fav-modal]").forEach(btn=>{
+      btn.addEventListener("click", (ev)=>{
+        ev.preventDefault();
+        ev.stopPropagation();
+        toggleTeacherFavorite(btn.getAttribute("data-teacher-fav-modal"));
+      });
+    });
+  }
 
   function renderTeacherCards(){
     const searchInput = document.getElementById("teacherCardSearch");
@@ -57984,8 +58064,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
     if (!dictationRound.length) {
       const area = document.getElementById("dictArea");
-      const modeText = "当前范围暂时没有可抽取题目，可以换成“智能混合”或选择“4B 全册混合复习”。";
-      if (area) area.innerHTML = `<div class="dict-result"><h3>暂时没有可练题目</h3><p>${modeText}</p></div>`;
+      const isWrongMode = mode === "wrong";
+      const modeText = isWrongMode
+        ? "🎉 目前没有需要订正的错题，继续保持！可以换成“智能混合”再练一轮。"
+        : "当前范围暂时没有可抽取题目，可以换成“智能混合”或选择“4B 全册混合复习”。";
+      const emptyHead = isWrongMode ? "暂时没有需要订正的错题" : "暂时没有可练题目";
+      if (area) area.innerHTML = `<div class="dict-result"><h3>${emptyHead}</h3><p>${modeText}</p></div>`;
       renderDictationMiniReport();
       return;
     }
