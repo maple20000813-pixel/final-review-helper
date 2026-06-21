@@ -102,10 +102,8 @@
   .display-size-mark{color:var(--ink-soft);font-weight:800;line-height:1;}
   /* 字号 = 整体缩放正文；全屏弹窗反向缩放回正常大小 */
   .wrap{ zoom: var(--ui-scale, 1); }
-  .display-settings-mask,
   .import-mode-panel,
-  .guide-mask,
-  .library-explain-modal{ zoom: calc(1 / var(--ui-scale, 1)); }
+  .guide-mask{ zoom: calc(1 / var(--ui-scale, 1)); }
   body[data-weight="bold"]{ --wb-q-weight:700; }
   body[data-weight="bold"] .wrong-card-question,
   body[data-weight="bold"] .wrong-card-answer{ font-weight:700 !important; }
@@ -62251,6 +62249,12 @@ function openLibraryExplainModal(q){
     else fn();
   }
   ready(function(){
+    // 把这两个全屏弹窗移到 body 顶层，避免被隐藏的 view/home 连带藏住
+    // （讲评卡详情"点了不弹、要返回才出现"的根因）
+    ["libraryExplainModal","displaySettingsModal"].forEach(function(mid){
+      var el = document.getElementById(mid);
+      if (el && el.parentNode !== document.body) document.body.appendChild(el);
+    });
     saved = safeLoad();
     draft = Object.assign({}, saved);
     applySettings(saved);
